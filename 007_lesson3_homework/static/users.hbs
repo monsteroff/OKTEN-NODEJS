@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .usersContainer {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding: 15px;
+        }
+
+        .usersContainer-user {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 400px;
+            flex-grow: 1;
+            gap: 5px;
+            background-color: silver;
+            border: 2px solid silver;
+            border-radius: 10px;
+            padding: 15px;
+            transition: 0.3s;
+        }
+
+        .usersContainer-user:hover {
+            box-shadow: 0 0 0 3px black inset;
+        }
+
+        a, a:link, a:active, a:visited {
+            display: block;
+            background-color: white;
+            border-radius: 4px;
+            padding: 15px;
+            width: fit-content;
+            color: black;
+            border: 2px solid white;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            box-shadow: 0 0 0 2px black inset;
+        }
+    </style>
+</head>
+<body>
+<div class="usersContainer">
+    {{#each filteredUsers}}
+        <div class="usersContainer-user">
+            <h2>FIRST NAME : {{this.firstName}}</h2>
+            <h2>LAST NAME : {{this.lastName}}</h2>
+            <h2>EMAIL : {{this.email}}</h2>
+            <h2>AGE : {{this.age}}</h2>
+            <h2>CITY : {{this.city}}</h2>
+            <a href="http://localhost:5200/users/{{this.id}}">User Info</a>
+        </div>
+    {{/each}}
+</div>
+</body>
+</html>

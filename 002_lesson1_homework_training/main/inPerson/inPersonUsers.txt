@@ -1,0 +1,6 @@
+NAME: user1
+AGE: 28
+CITY: Lviv
+NAME: user1
+AGE: 28
+CITY: Lviv

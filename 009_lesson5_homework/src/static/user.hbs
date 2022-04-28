@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User</title>
+</head>
+<body>
+{{#user}}
+    <h2>FIRST NAME : {{this.firstName}}</h2>
+    <h2>LAST NAME : {{this.lastName}}</h2>
+    <h2>EMAIL : {{this.email}}</h2>
+    <h2>AGE : {{this.age}}</h2>
+    <form method="POST">
+        <input id="deleteInputButton" name="btn" type="submit" value="DELETE">
+    </form>
+{{/user}}
+
+</body>
+</html>
